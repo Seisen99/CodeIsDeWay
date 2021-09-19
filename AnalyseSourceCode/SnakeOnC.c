@@ -22,6 +22,8 @@ Although this program may compile/ run in Cygwin it runs slowly.
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
+#include <string.h>
+
 
 #define SNAKE_ARRAY_SIZE 310
 
@@ -436,7 +438,7 @@ void inputScore(int score) //This seriously needs to be cleaned up
 	printf("Your Score made it into the top 5!!!");
 	gotoxy(10,6);
 	printf("Please enter your name: ");
-	gets(name);
+	fgets(name);
 
 	x = 0;
 	while(!feof(fp))
